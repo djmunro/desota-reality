@@ -1,0 +1,61 @@
+/* Include this stylesheet after Milligram or merge it with your main.css */
+
+:root {
+    --primary-color: #34495E;
+    --secondary-color: #F1D40F;
+    --grey: #f2f2f2;
+  }
+  
+
+a {
+    color: var(--primary-color);
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: var(--primary-color);
+    border: .1rem solid var(--primary-color);
+}
+
+.button.button-outline, button.button-outline, input[type='button'].button-outline, input[type='reset'].button-outline, input[type='submit'].button-outline {
+    color: var(--primary-color);
+}
+
+.button.button-clear, button.button-clear, input[type='button'].button-clear, input[type='reset'].button-clear, input[type='submit'].button-clear {
+    color: var(--primary-color);
+}
+
+pre.prettyprint .lit {
+    color: var(--primary-color);
+}
+
+.share-icon {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+pre {
+    background: #f4f5f6;
+    border-left: .3rem solid var(--primary-color);
+}
+
+pre.prettyprint {
+    border-left: .3rem solid #0074D9 !important;
+    color: #655d5d;
+}
+
+pre.prettyprint .tag {
+    color: var(--primary-color);
+}
+
+pre.prettyprint .atn {
+    color: #0065ce;
+}
+
+input[type='email']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, textarea:focus, select:focus {
+    border: .1rem solid var(--primary-color);
+}
+
+.github-corner {
+    color: #f4f5f6;
+    fill: var(--primary-color);
+}
