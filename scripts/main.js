@@ -1,9 +1,15 @@
 "use strict";
 
-console.info("Yeah!! Milligram is amazing.");
-let mainNav = document.getElementById("js-menu");
-let navBarToggle = document.getElementById("js-navbar-toggle");
+// console.info("Yeah!! Milligram is amazing.");
+// let mainNav = document.getElementById("js-menu");
+// let navBarToggle = document.getElementById("js-navbar-toggle");
 
-navBarToggle.addEventListener("click", function() {
-  mainNav.classList.toggle("active");
+// navBarToggle.addEventListener("click", function() {
+//   mainNav.classList.toggle("active");
+// });
+
+document.querySelector(".hamburger").addEventListener("click", e => {
+  e.preventDefault();
+
+  document.querySelector(".navigation").classList.toggle("active");
 });
