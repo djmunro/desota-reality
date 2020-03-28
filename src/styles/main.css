@@ -196,15 +196,28 @@ li:last-child {
 */
 
 .fa-bars {
-  height: 18px;
+  height: 24px;
   width: auto;
 }
 
 .navbar {
   font-size: 18px;
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  background-image: linear-gradient(
+    260deg,
+    #246c9d 0%,
+    var(--primary-color) 100%
+  );
   border: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 10px;
+}
+
+.logo-container {
+  height: 54px;
+}
+
+.logo-container img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .main-nav {
@@ -232,7 +245,7 @@ li:last-child {
 
 .navbar-toggle {
   position: absolute;
-  top: 10px;
+  top: 12px;
   right: 20px;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.8);
@@ -347,16 +360,14 @@ li:last-child {
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
     align-items: center;
   }
 
   .main-nav {
     display: flex;
-    margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
+    margin: 0;
   }
 
   .main-nav li {
