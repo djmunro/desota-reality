@@ -81,7 +81,6 @@ select:focus {
 /* Global syles */
 body {
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
 }
 button {
   font-family: "Montserrat", sans-serif;
@@ -248,7 +247,6 @@ header img {
 }
 .mobile-navigation ul li a {
   text-decoration: none;
-
   display: flex;
   align-items: center;
   padding: 7px 15px;
@@ -261,6 +259,11 @@ header img {
 /* CTA */
 .cta {
   color: #ffffff;
+}
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 .description {
   font-weight: 500;
@@ -366,12 +369,12 @@ header img {
 
   .navigation {
     display: flex;
-    align-items: center;
   }
 
   .navigation ul {
     display: inline-flex;
     flex-direction: row;
+    height: 0px;
   }
 
   .navigation ul li {
@@ -385,6 +388,8 @@ header img {
   .navigation ul li a {
     text-decoration: none;
     text-transform: capitalize;
+    color: #ffffff;
+    font-weight: 500;
   }
 
   .navigation ul li a:hover {
