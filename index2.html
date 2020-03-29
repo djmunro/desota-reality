@@ -116,6 +116,7 @@
       .fa-bars {
         width: 20px;
         height: auto;
+        color: #ffffff;
       }
       @media (min-width: 40rem) {
         .fa-bars {
@@ -135,13 +136,16 @@
           list-style: none;
         }
 
+        li + li {
+          margin-left: 1rem;
+        }
+
         .navigation ul li a {
           text-decoration: none;
           text-transform: capitalize;
         }
 
-        li + li {
-          margin-left: 1rem;
+        .navigation ul li a:hover {
         }
       }
     </style>
@@ -194,7 +198,7 @@
 
       function create() {
         popperInstance = Popper.createPopper(button, tooltip, {
-          placement: "bottom",
+          placement: "bottom-start",
           modifiers: [
             {
               name: "offset",
