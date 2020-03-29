@@ -1,7 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Popper Tutorial</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Milligram provides a minimal setup of styles for a fast and clean starting point. Specially designed for better performance and higher productivity with fewer properties to reset resulting in cleaner code."
+    />
+    <title>DeSota Realty</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css"
+    /> -->
     <style>
       body {
         background: #ffffff;
@@ -149,7 +166,6 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="styles/main2.css" />
   </head>
   <body>
     <header>
@@ -189,55 +205,6 @@
         <div id="arrow" data-popper-arrow></div>
       </div>
     </header>
-
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script>
-      const button = document.querySelector("#button");
-      const tooltip = document.querySelector("#tooltip");
-
-      let popperInstance = null;
-
-      function create() {
-        popperInstance = Popper.createPopper(button, tooltip, {
-          placement: "bottom-start",
-          modifiers: [
-            {
-              name: "offset",
-              options: {
-                offset: [0, 8]
-              }
-            }
-          ]
-        });
-      }
-
-      function destroy() {
-        if (popperInstance) {
-          popperInstance.destroy();
-          popperInstance = null;
-        }
-      }
-
-      function show() {
-        tooltip.setAttribute("data-show", "");
-        create();
-      }
-
-      function hide() {
-        tooltip.removeAttribute("data-show");
-        destroy();
-      }
-
-      let showTooltip = false;
-
-      button.addEventListener("click", () => {
-        showTooltip = !showTooltip;
-        if (showTooltip) {
-          show();
-        } else {
-          hide();
-        }
-      });
-    </script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

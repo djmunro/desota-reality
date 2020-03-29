@@ -155,6 +155,116 @@ button {
   background-position: center top;
 }
 
+/* Header */
+header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 0.5rem 1rem;
+}
+
+header img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fa-bars {
+  width: 20px;
+  height: auto;
+  color: #ffffff;
+}
+
+#tooltip {
+  background-image: linear-gradient(
+    -1deg,
+    rgba(248, 248, 248, 0.97) 0%,
+    rgba(255, 255, 255, 0.97) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  /* font-size: 13px; */
+  border-radius: 4px;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tooltip[data-show] {
+  display: block;
+}
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+#arrow::before {
+  content: "";
+  transform: rotate(45deg);
+  background: #ffffff;
+}
+
+#tooltip[data-popper-placement^="top"] > #arrow {
+  bottom: -4px;
+}
+
+#tooltip[data-popper-placement^="bottom"] > #arrow {
+  top: -4px;
+}
+
+#tooltip[data-popper-placement^="left"] > #arrow {
+  right: -4px;
+}
+
+#tooltip[data-popper-placement^="right"] > #arrow {
+  left: -4px;
+}
+
+.navigation {
+  display: none;
+}
+
+.mobile-navigation ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  overflow: hidden auto;
+}
+.mobile-navigation ul li:not(:first-child) {
+  border-top: 1px solid rgb(238, 238, 238);
+}
+.mobile-navigation ul li {
+  list-style: none;
+  width: 100%;
+}
+.mobile-navigation ul li:hover {
+  cursor: pointer;
+  background: rgb(227, 243, 255);
+}
+.mobile-navigation ul li a {
+  text-decoration: none;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  color: rgb(68, 68, 68);
+}
+.mobile-navigation ul li a:hover {
+  text-decoration: underline;
+}
+
 /* CTA */
 .cta {
   color: #ffffff;
@@ -255,107 +365,41 @@ button {
   width: 2em;
 }
 
-header {
-  height: 6rem;
-  /* background-color: #000000; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5rem;
-}
-
-.logo {
-  height: 6rem;
-}
-
-.logo img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.navigation {
-  position: absolute;
-  top: 6rem;
-  /* top: 0; */
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: #24252a;
-  transition: all 0.6s ease-in-out;
-  z-index: 1000;
-}
-
-.navigation.active {
-  left: 0;
-}
-
-.navigation ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.navigation ul li {
-  list-style: none;
-  width: 100%;
-  text-align: center;
-}
-
-.navigation ul li a {
-  /* border-bottom: solid 0.25px rgba(211, 211, 211, 0.6); */
-  text-decoration: none;
-  color: #fff;
-  font-size: 2rem;
-  line-height: 2rem;
-  width: 100%;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  display: block;
-}
-
-.navigation ul li a:hover {
-  background-color: lightskyblue;
-}
-
-.line {
-  width: 40px;
-  height: 7px;
-  background-color: #fff;
-  margin-bottom: 5px;
-  border-radius: 5px;
-}
-
-.hamburger {
-  display: block;
-  cursor: pointer;
-}
-
 /* Larger than mobile screen */
 @media (min-width: 40rem) {
+  .fa-bars {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation ul {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  .navigation ul li {
+    list-style: none;
+  }
+
+  li + li {
+    margin-left: 1rem;
+  }
+
+  .navigation ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  .navigation ul li a:hover {
+  }
 }
 
 /* Larger than tablet screen */
 @media (min-width: 80rem) {
-  .navigation {
-    z-index: 0;
-    position: static;
-    background: transparent;
-    width: min-content;
-  }
-  header {
-    padding: 0 10rem;
-  }
-  .hamburger {
-    display: none;
-  }
-  .navigation ul {
-    display: flex;
-    flex-direction: row;
-  }
-  .navigation ul li a {
-    display: inline-block;
-  }
 }
 
 /* Larger than desktop screen */

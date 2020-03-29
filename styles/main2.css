@@ -1,0 +1,145 @@
+body {
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 0.25rem 1rem;
+}
+
+header img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fa-bars {
+  width: 20px;
+  height: auto;
+  color: #ffffff;
+}
+
+#tooltip {
+  background-image: linear-gradient(
+    -1deg,
+    rgba(248, 248, 248, 0.97) 0%,
+    rgba(255, 255, 255, 0.97) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  /* font-size: 13px; */
+  border-radius: 4px;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tooltip[data-show] {
+  display: block;
+}
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+#arrow::before {
+  content: "";
+  transform: rotate(45deg);
+  background: #ffffff;
+}
+
+#tooltip[data-popper-placement^="top"] > #arrow {
+  bottom: -4px;
+}
+
+#tooltip[data-popper-placement^="bottom"] > #arrow {
+  top: -4px;
+}
+
+#tooltip[data-popper-placement^="left"] > #arrow {
+  right: -4px;
+}
+
+#tooltip[data-popper-placement^="right"] > #arrow {
+  left: -4px;
+}
+
+.navigation {
+  display: none;
+}
+
+.mobile-navigation ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  overflow: hidden auto;
+}
+.mobile-navigation ul li:not(:first-child) {
+  border-top: 1px solid rgb(238, 238, 238);
+}
+.mobile-navigation ul li {
+  list-style: none;
+  width: 100%;
+}
+.mobile-navigation ul li:hover {
+  cursor: pointer;
+  background: rgb(227, 243, 255);
+}
+.mobile-navigation ul li a {
+  text-decoration: none;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  color: rgb(68, 68, 68);
+}
+.mobile-navigation ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 40rem) {
+  .fa-bars {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+  }
+
+  .navigation ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navigation ul li {
+    list-style: none;
+  }
+
+  li + li {
+    margin-left: 1rem;
+  }
+
+  .navigation ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  .navigation ul li a:hover {
+  }
+}

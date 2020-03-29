@@ -1,15 +1,48 @@
 "use strict";
 
-// console.info("Yeah!! Milligram is amazing.");
-// let mainNav = document.getElementById("js-menu");
-// let navBarToggle = document.getElementById("js-navbar-toggle");
+const button = document.querySelector("#button");
+const tooltip = document.querySelector("#tooltip");
 
-// navBarToggle.addEventListener("click", function() {
-//   mainNav.classList.toggle("active");
-// });
+let popperInstance = null;
 
-document.querySelector(".hamburger").addEventListener("click", e => {
-  e.preventDefault();
+function create() {
+  popperInstance = Popper.createPopper(button, tooltip, {
+    placement: "bottom-start",
+    modifiers: [
+      {
+        name: "offset",
+        options: {
+          offset: [0, 8]
+        }
+      }
+    ]
+  });
+}
 
-  document.querySelector(".navigation").classList.toggle("active");
+function destroy() {
+  if (popperInstance) {
+    popperInstance.destroy();
+    popperInstance = null;
+  }
+}
+
+function show() {
+  tooltip.setAttribute("data-show", "");
+  create();
+}
+
+function hide() {
+  tooltip.removeAttribute("data-show");
+  destroy();
+}
+
+let showTooltip = false;
+
+button.addEventListener("click", () => {
+  showTooltip = !showTooltip;
+  if (showTooltip) {
+    show();
+  } else {
+    hide();
+  }
 });
