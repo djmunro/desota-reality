@@ -362,9 +362,9 @@ header img {
 }
 
 @media (orientation: landscape) {
-  .container,
-  .description {
+  .hero .container {
     padding-top: 0rem;
+    padding-bottom: 0rem;
   }
   .hero {
     height: 100vh;
