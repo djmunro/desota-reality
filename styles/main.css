@@ -368,7 +368,7 @@ header img {
 }
 
 /* Larger than mobile screen */
-@media (min-width: 60rem) {
+/* @media (min-width: 60rem) {
   .fa-bars {
     display: none;
   }
@@ -465,7 +465,7 @@ header img {
     width: 300px;
     height: auto;
   }
-}
+} */
 
 /* Larger than tablet screen */
 @media (min-width: 80rem) {
