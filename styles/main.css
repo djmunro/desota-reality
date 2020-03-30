@@ -362,7 +362,7 @@ header img {
   width: 2em;
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
   .hero .container {
     padding-top: 1rem;
   }
@@ -372,7 +372,7 @@ header img {
 }
 
 /* Larger than mobile screen */
-@media (min-width: 60rem) and (orientation: portrait) {
+@media (min-width: 60rem) {
   .hero {
     height: 55vh;
   }
