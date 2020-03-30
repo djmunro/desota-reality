@@ -87,8 +87,8 @@ button {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   max-width: 120rem;
   padding-bottom: 3rem;
   padding-top: 3rem;
@@ -372,7 +372,11 @@ header img {
 }
 
 /* Larger than mobile screen */
-/* @media (min-width: 60rem) {
+@media (min-width: 60rem) {
+  .hero {
+    height: 55vh;
+  }
+
   .fa-bars {
     display: none;
   }
@@ -469,7 +473,7 @@ header img {
     width: 300px;
     height: auto;
   }
-} */
+}
 
 /* Larger than tablet screen */
 @media (min-width: 80rem) {
