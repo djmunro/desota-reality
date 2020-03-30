@@ -364,10 +364,10 @@ header img {
 @media (orientation: landscape) {
   .container,
   .description {
-    margin-top: 1rem;
+    margin-top: 0rem;
   }
   .hero {
-    height: 90vh;
+    height: 100vh;
   }
 }
 
