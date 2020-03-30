@@ -372,7 +372,7 @@ header img {
 }
 
 /* Larger than mobile screen */
-@media (min-width: 60rem) and (orientation: landscape) {
+@media (min-width: 60rem) and (orientation: portrait) {
   .hero {
     height: 55vh;
   }
