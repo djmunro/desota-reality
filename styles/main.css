@@ -361,8 +361,14 @@ header img {
   width: 2em;
 }
 
+@media (orientation: landscape) {
+  .hero {
+    height: 90vh;
+  }
+}
+
 /* Larger than mobile screen */
-@media (min-width: 40rem) {
+@media (min-width: 60rem) {
   .fa-bars {
     display: none;
   }
