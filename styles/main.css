@@ -89,7 +89,7 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 140rem;
+  max-width: 120rem;
   padding-bottom: 3rem;
   padding-top: 3rem;
 }
@@ -142,7 +142,7 @@ button {
 /* Mobile First Media Queries */
 /* Hero styles */
 .hero {
-  height: 70vh;
+  height: 40vh;
   background-color: #000000;
   background-image: linear-gradient(
       180deg,
@@ -363,8 +363,16 @@ header img {
 
 /* Larger than mobile screen */
 @media (min-width: 40rem) {
+  .hero {
+    height: 60vh;
+  }
+
   .fa-bars {
     display: none;
+  }
+
+  header {
+    height: 8rem;
   }
 
   .navigation {
@@ -390,14 +398,78 @@ header img {
     text-transform: capitalize;
     color: #ffffff;
     font-weight: 500;
+    font-size: 18px;
   }
 
   .navigation ul li a:hover {
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .title {
+    margin-top: 4%;
+    font-size: 66px;
+  }
+
+  .description,
+  .contact-btn {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+
+  .contact-btn {
+    width: 200px;
+  }
+
+  .testimonials-btn {
+    width: 200px;
+  }
+
+  .listings {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: #fff;
+    color: #444;
+  }
+
+  .listing {
+    background: #f2f2f2;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+  }
+
+  .listing + .listing {
+    margin: 0;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .question-container,
+  .info-container {
+    width: 50vw;
+  }
+
+  .info-img {
+    width: 300px;
+    height: auto;
   }
 }
 
 /* Larger than tablet screen */
 @media (min-width: 80rem) {
+  .listings {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 /* Larger than desktop screen */
