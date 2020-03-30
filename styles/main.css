@@ -259,6 +259,7 @@ header img {
 /* CTA */
 .cta {
   color: #ffffff;
+  text-align: center;
 }
 .title {
   font-size: 36px;
