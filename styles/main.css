@@ -366,9 +366,9 @@ header img {
     padding-top: 0rem;
     padding-bottom: 0rem;
   }
-  /* .hero {
-    height: 100vh;
-  } */
+  .hero {
+    height: 80vh;
+  }
 }
 
 /* Larger than mobile screen */
