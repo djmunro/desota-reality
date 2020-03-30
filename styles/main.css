@@ -364,7 +364,7 @@ header img {
 @media (orientation: landscape) {
   .container,
   .description {
-    margin-top: 0rem;
+    padding-top: 0rem;
   }
   .hero {
     height: 100vh;
