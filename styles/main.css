@@ -142,7 +142,7 @@ button {
 /* Mobile First Media Queries */
 /* Hero styles */
 .hero {
-  height: 40vh;
+  height: 70vh;
   background-color: #000000;
   background-image: linear-gradient(
       180deg,
@@ -363,10 +363,6 @@ header img {
 
 /* Larger than mobile screen */
 @media (min-width: 40rem) {
-  .hero {
-    height: 60vh;
-  }
-
   .fa-bars {
     display: none;
   }
